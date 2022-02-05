@@ -6,11 +6,9 @@ import wrapt
 from debug_toolbar.panels import Panel
 from debug_toolbar.panels.sql.utils import contrasting_color_generator
 from django.dispatch import Signal
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
-template_rendered = Signal(providing_args=[
-    'instance', 'start', 'end', 'level', 'processing_timeline',
-])
+template_rendered = Signal()
 
 
 node_element_colors = {}
